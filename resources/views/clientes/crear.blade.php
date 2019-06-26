@@ -42,7 +42,7 @@
               <label for="telefono">Número de Teléfono:</label>
               <input type="text" class="form-control" name="telefono"/>
           </div>                     
-          <button type="submit" class="btn btn-primary-outline">Registrar Cliente</button>
+          <button type="submit" class="btn btn-primary">Registrar Cliente</button>
       </form>
   </div>
 </div>

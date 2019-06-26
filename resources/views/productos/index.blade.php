@@ -26,9 +26,7 @@
           <td>Código Producto</td>
           <td>Nombre del Producto</td>
           <td>Detalle del Artículo</td>
-          <td>City</td>
-          <td>Country</td>
-          <td colspan = 2>Actions</td>
+          <td colspan = 2>Acciones</td>
         </tr>
     </thead>
     <tbody>
@@ -39,7 +37,7 @@
             <td>{{$producto->nombre_producto}}</td>
             <td>{{$producto->detalle_producto}}</td>
             <td>
-                <a href="{{ route('productos.edit',$producto->id)}}" class="btn btn-primary">Editar</a>
+                <a href="{{ route('productos.edit', $producto->id)}}" class="btn btn-primary">Editar</a>
             </td>
             <td>
                 <form action="{{ route('productos.destroy', $producto->id)}}" method="post">

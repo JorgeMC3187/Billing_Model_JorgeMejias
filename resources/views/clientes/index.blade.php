@@ -29,7 +29,7 @@
           <td>Correo</td>
           <td>Direccion</td>
           <td>Telefono</td>
-          <td colspan = 2>Actions</td>
+          <td colspan = 2>Acciones</td>
         </tr>
     </thead>
     <tbody>

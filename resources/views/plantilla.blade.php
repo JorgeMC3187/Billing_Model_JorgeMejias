@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi sitio con laravel con suo de modelos y CRUD</title>
+  <title>Mi sitio con laravel con uso de modelos y CRUD</title>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>

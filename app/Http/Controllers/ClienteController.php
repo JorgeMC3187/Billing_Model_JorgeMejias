@@ -40,7 +40,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //hace el guardar en la base de datos
+        //hace el arreglo para guardar en la base de datos
         $request->validate([     
             'cedula'=>'required',
             'nombre'=>'required',
@@ -49,7 +49,8 @@ class ClienteController extends Controller
             'direccion'=>'required',
             'telefono'=>'required' 
         ]);
-
+        // toma los datos de los del form 
+        // y los asigna al respectivo valor del arreglo para pasarlo a la base de datos. 
         $cliente = new Cliente([
             'cedula' => $request->get('cedula'),
             'nombre' => $request->get('nombre'),
@@ -58,7 +59,9 @@ class ClienteController extends Controller
             'direccion' => $request->get('direccion'),
             'telefono' => $request->get('telefono')
         ]);
+        // realiza el guardar en la base de datos
         $cliente->save();
+        //retorna la vista clientes y un mensaje de success
         return redirect('/clientes')->with('success', 'Cliente Registrado!');
 
 
@@ -83,7 +86,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        //busca en la tabla por id 
         $cliente = Cliente::find($id);
         return view('clientes.editar', compact('cliente'));  
 

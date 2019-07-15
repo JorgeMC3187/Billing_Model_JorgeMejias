@@ -33,7 +33,7 @@
                 <input type="text" class="form-control" name="detalle_producto" value={{ $producto->detalle_producto }} />
             </div>
 
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
     </div>
 </div>

@@ -18,7 +18,7 @@
     <div>
     <a style="margin: 19px;" href="{{ route('productos.create')}}" class="btn btn-primary">Nuevo Producto</a>
     </div>  
-
+   
   <table class="table table-striped">
     <thead>
         <tr>
@@ -26,9 +26,7 @@
           <td>Código Producto</td>
           <td>Nombre del Producto</td>
           <td>Detalle del Artículo</td>
-          <td>City</td>
-          <td>Country</td>
-          <td colspan = 2>Actions</td>
+          <td colspan = 2>Acciones</td>
         </tr>
     </thead>
     <tbody>

@@ -78,7 +78,7 @@ class ProductoController extends Controller
     {
         //
         $producto = Producto::find($id);
-        return view('productos.editar', compact('productos'));
+        return view('productos.editar', compact('producto'));
 
     }
 

@@ -31,7 +31,7 @@
               <input type="text" class="form-control" name="detalle_producto"/>
           </div>
                                
-          <button type="submit" class="btn btn-primary-outline">Registrar Producto</button>
+          <button type="submit" class="btn btn-primary">Registrar Producto</button>
       </form>
   </div>
 </div>

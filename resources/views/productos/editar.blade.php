@@ -33,6 +33,13 @@
                 <input type="text" class="form-control" name="detalle_producto" value={{ $producto->detalle_producto }} />
             </div>
 
+            <div class="form-group">
+                <label for="precio_producto">Precio del artículo:</label>
+                <input type="text" class="form-control" name="precio_producto" value={{ $producto->precio_producto }} />
+            </div>
+
+            
+
             <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
     </div>

@@ -13,38 +13,34 @@
 
 <div class="row">
 <div class="col-sm-12">
-    <h1 class="display-3">Lista de Productos</h1>  
+    <h1 class="display-3">Lista de Usuarios</h1>  
     
     <div>
-    <a style="margin: 19px;" href="{{ route('productos.create')}}" class="btn btn-primary">Nuevo Producto</a>
-    
         <a style="margin: 27px;" href="/home" class="btn btn-primary">volver al Menu</a>
-      </div> 
+    </div> 
    
   <table class="table table-striped">
     <thead>
         <tr>
           <td>Id</td>
-          <td>Código Producto</td>
-          <td>Nombre del Producto</td>
-          <td>Detalle del Artículo</td>
-          <td>Precio del Artículo</td>
+          <td>Nombre de usuario</td>
+          <td>Correo usuario</td>
+          <td>Contraseña</td>
           <td colspan = 2>Acciones</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($productos as $producto)
+        @foreach($usuarios as $usuario)
         <tr>
-            <td>{{$producto->id}}</td>
-            <td>{{$producto->cod_producto}}</td>
-            <td>{{$producto->nombre_producto}}</td>
-            <td>{{$producto->detalle_producto}}</td>
-            <td>{{$producto->precio_producto}}</td>
+            <td>{{$usuario->id}}</td>
+            <td>{{$usuario->name}}</td>
+            <td>{{$usuario->email}}</td>
+            <td>{{$usuario->password}}</td>
             <td>
-                <a href="{{ route('productos.edit',$producto->id)}}" class="btn btn-primary">Editar</a>
+                <a href="{{ route('usuarios.edit',$usuario->id)}}" class="btn btn-primary d-flex flex-row-reverse">Editar</a>
             </td>
             <td>
-                <form action="{{ route('productos.destroy', $producto->id)}}" method="post">
+                <form action="{{ route('usuarios.destroy', $usuario->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Eliminar</button>

@@ -15,9 +15,8 @@ class TablaDeFacturas extends Migration
     {
         Schema::create('tbl_facturas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('cod_factura');
-            $table->bigInteger('cedula');
-            $table->bigInteger('cod_producto');
+            $table->bigInteger('id_factura')->unique();
+            $table->bigInteger('id_usuario')->unique();
             $table->timestamps();
         });
     }

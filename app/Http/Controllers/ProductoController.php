@@ -44,14 +44,18 @@ class ProductoController extends Controller
         $request->validate([           
             'cod_producto'=>'required',
             'nombre_producto'=>'required',
-            'detalle_producto'=>'required'
+            'detalle_producto'=>'required',
+            'precio_producto' =>'required'
+
+           
         ]);
 
         
         $producto = new Producto([
             'cod_producto' => $request->get('cod_producto'),
             'nombre_producto' => $request->get('nombre_producto'),
-            'detalle_producto' => $request->get('detalle_producto')
+            'detalle_producto' => $request->get('detalle_producto'),
+            'precio_producto' => $request->get('precio_producto')
         ]);
         $producto->save();
         return redirect('/productos')->with('success', 'Producto guardado!');
@@ -95,14 +99,15 @@ class ProductoController extends Controller
         $request->validate([           
             'cod_producto'=>'required',
             'nombre_producto'=>'required',
-            'detalle_producto'=>'required'
+            'detalle_producto'=>'required',
+            'precio_producto' =>'required'
         ]);
 
         $producto = Producto::find($id);
         $producto->cod_producto =  $request->get('cod_producto');
         $producto->nombre_producto = $request->get('nombre_producto');
         $producto->detalle_producto = $request->get('detalle_producto');
-        
+        $producto->precio_producto = $request->get('precio_producto');
         $producto->save();
 
         return redirect('/productos')->with('success', 'Producto Actualizado!');

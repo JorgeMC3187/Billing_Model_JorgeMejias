@@ -44,13 +44,15 @@ class UsuarioController extends Controller
     {
         //
 
-        $request->validate([           
+        $request->validate([     
+            'id_usuario'=>'required',      
             'name'=>'required',
             'email'=>'required',
             'password'=>'required'
         ]);
 
         $usuario = new User([
+            'id_usuario' => $request->get('id_usuario'),
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => $request->get('password')
@@ -93,13 +95,15 @@ class UsuarioController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $request->validate([           
+        $request->validate([ 
+            'id_usuario'=>'required',          
             'name'=>'required',
             'email'=>'required',
             'password'=>'required'
         ]);
 
         $usuario = User::find($id);
+        $usuario ->id_usuario =  $request->get('id_usuario');
         $usuario ->name =  $request->get('name');
         $usuario ->email = $request->get('email');
         $usuario->password = $request->get('password');

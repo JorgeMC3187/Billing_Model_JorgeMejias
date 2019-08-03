@@ -18,7 +18,7 @@
     <div>
     <a style="margin: 19px;" href="{{ route('productos.create')}}" class="btn btn-primary">Nuevo Producto</a>
     
-        <a style="margin: 27px;" href="/home" class="btn btn-primary">volver al Menu</a>
+        <a style="margin: 27px;" href="/home" class="btn btn-primary">Volver al Menu</a>
       </div> 
    
   <table class="table table-striped">

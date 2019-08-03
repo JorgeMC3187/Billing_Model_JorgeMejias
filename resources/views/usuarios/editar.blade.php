@@ -17,6 +17,13 @@
         <form method="post" action="{{ route('usuarios.update', $usuario->id) }}">
             @method('PATCH') 
             @csrf
+
+            <div class="form-group">
+
+                <label for="id_usuario">Cédula de Usuario:</label>
+                <input type="text" class="form-control" name="id_usuario" value={{ $usuario->id_usuario }} />
+            </div>
+
             <div class="form-group">
 
                 <label for="name">Nombre de Usuario:</label>

@@ -15,8 +15,8 @@ class TablafacturasProductos extends Migration
     {
         Schema::create('tbl_facturaproducto', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_factura')->unique();
-            $table->bigInteger('cod_producto')->unique();
+            $table->bigInteger('id_factura')->unsigned();
+            $table->bigInteger('cod_producto')->unsigned();
             $table->timestamps();
         });
     }

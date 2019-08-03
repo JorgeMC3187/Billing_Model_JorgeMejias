@@ -112,9 +112,6 @@ class ProductoController extends Controller
 
         return redirect('/productos')->with('success', 'Producto Actualizado!');
 
-
-
-
     }
 
     /**

@@ -25,7 +25,11 @@
                   <a class="nav-link " href="{{ route('usuarios.index')}}">Edición de Usuarios</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link disabled" href="#">facturas</a>
+                  <a class="nav-link " href="{{ route('ventas.index')}}">Carrito de Compras
+                  </a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/facturas">Reporte Facturas</a>
                       </li>
               </ul>
             </div>

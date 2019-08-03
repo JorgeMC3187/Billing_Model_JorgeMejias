@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+          /*
+         * configuracion para reconocer Libreria PDF...
+         */
+        Barryvdh\DomPDF\ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+         /*
+         * Allias para poder llamar a la libreria PDF DOMPDF...
+         */
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

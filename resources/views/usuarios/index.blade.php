@@ -16,13 +16,14 @@
     <h1 class="display-3">Lista de Usuarios</h1>  
     
     <div>
-        <a style="margin: 27px;" href="/home" class="btn btn-primary">volver al Menu</a>
+        <a style="margin: 27px;" href="/home" class="btn btn-primary">Volver al Menu</a>
     </div> 
    
   <table class="table table-striped">
     <thead>
         <tr>
           <td>Id</td>
+          <td>Cedula usuario</td>
           <td>Nombre de usuario</td>
           <td>Correo usuario</td>
           <td>Contraseña</td>
@@ -33,6 +34,7 @@
         @foreach($usuarios as $usuario)
         <tr>
             <td>{{$usuario->id}}</td>
+            <td>{{$usuario->id_usuario}}</td>
             <td>{{$usuario->name}}</td>
             <td>{{$usuario->email}}</td>
             <td>{{$usuario->password}}</td>

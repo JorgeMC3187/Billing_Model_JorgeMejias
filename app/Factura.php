@@ -11,6 +11,7 @@ class Factura extends Model
 
     protected $fillable = [       
         'id_factura',
-        'id_usuario'
+        'id_usuario',
+        'preciototal'
     ];
 }

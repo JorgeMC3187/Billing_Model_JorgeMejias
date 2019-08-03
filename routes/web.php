@@ -21,5 +21,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('productos', 'ProductoController');
 Route::resource('usuarios', 'UsuarioController');
-Route::resource('facturas', 'FacturaController');
-Route::resource('factura-producto', 'FacturaProductoController');
+Route::resource('ventas','VentasController');
+
+
+Route::post('/getBill', "ReporteController@getBill");
+Route::get('/facturas', "ReporteController@index");
+Route::get('/facturas/listafactura', "ReporteController@getBill");
+Route::get('/facturas/usuariosfactura', "ReporteController@getBillbyUser");
+Route::get('/facturas/productosfactura', "ReporteController@getBillbyProduct");
+
+
+
+//Route::post('/getBillbyProduct', "ReporteController@getBillbyProduct");
+
+

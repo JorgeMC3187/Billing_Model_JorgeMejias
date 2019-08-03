@@ -15,8 +15,8 @@ class TablaDeFacturas extends Migration
     {
         Schema::create('tbl_facturas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_factura')->unique();
-            $table->bigInteger('id_usuario')->unique();
+            $table->bigInteger('id_user')->unsigned();
+            $table->float('preciototal',8,2);
             $table->timestamps();
         });
     }
